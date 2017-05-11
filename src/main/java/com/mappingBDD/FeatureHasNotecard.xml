@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="com.Entities.FeatureHasNotecard">
+        <table name="feature_has_notecard" schema="academia" catalog=""/>
+        <attributes>
+            <id name="id">
+                <column name="id" precision="11"/>
+            </id>
+            <basic name="featureId">
+                <column name="Feature_id" nullable="false" precision="11"/>
+            </basic>
+            <basic name="noteCardId">
+                <column name="NoteCard_id" nullable="false" precision="11"/>
+            </basic>
+            <many-to-one name="featureByFeatureId" optional="true" target-entity="com.Entities.Feature">
+                <join-column name="Feature_id" nullable="false" referenced-column-name="id"/>
+            </many-to-one>
+            <many-to-one name="notecardByNoteCardId" optional="true" target-entity="com.Entities.Notecard">
+                <join-column name="NoteCard_id" nullable="false" referenced-column-name="id"/>
+            </many-to-one>
+        </attributes>
+    </entity>
+</entity-mappings>

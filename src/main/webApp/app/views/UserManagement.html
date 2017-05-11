@@ -1,0 +1,59 @@
+<div class="col-md-2">
+  <ul class="nav nav-pills nav-stacked">
+    <li ><a href="#/DepotEleve"><i class="fa fa-home fa-fw"></i>Dépôts documents</a></li>
+    <li><a href="#/PlanningVuEleve"><i class="fa fa-file-o fa-fw"></i>Prise de rdv </a></li>
+    <li ><a href="#/MurEleve"><i class="fa fa-bar-chart-o fa-fw"></i>Mur Elève</a></li>
+    <li class="active"><a href="#/SujetEleve"><i class="fa fa-table fa-fw"></i>Sujet</a></li>
+
+  </ul>
+</div>
+<div class="col-md-3">
+  {{vm.persons}}
+  <form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>login</th>
+        <th>Nom</th>
+        <th>Spécialité</th>
+        <th>Grade</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="person in vm.persons">
+        <td>{{ person.login }}</td>
+        <td>{{ person.name }}</td>
+        <td>{{ person.speciality }}</td>
+        <td>
+          <select ng-model="person.typePerson">
+            <option value="Admin">Admin</option>
+            <option value="respo">Responsable Module</option>
+            <option value="client">Client</option>
+            <option value="student">Élève</option>
+          </select>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+        <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span
+              data-translate="entity.action.cancel">Cancel</span>
+      </button>
+      <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+        <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+      </button>
+    </div>
+  </form>
+</div>
+
+<!--<div class="col-md-9 well">-->
+<!--<div class="mainContent">-->
+<!--<div class="col-md-offset-1 col-md-10">-->
+<!--<div id="nomsujet-ele">Sujet</div>-->
+<!--<div id="text-sujet-ele">L’Administration accepte la déduction des frais de repas en imposant une limite de déductibilité minimale et maximale. Le minimum considéré…-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+</div>

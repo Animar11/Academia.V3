@@ -1,0 +1,42 @@
+   <div class="row">
+        <div class="col-md-2">
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#/DepotEleve"><i class="fa fa-home fa-fw"></i>Dépôts documents</a></li>
+                <li><a href="#/PlanningVuEleve"><i class="fa fa-file-o fa-fw"></i>Prise de rdv </a></li>
+                <li><a href="#/MurEleve"><i class="fa fa-bar-chart-o fa-fw"></i>Mur Elève</a></li>
+                <li><a href="#/SujetEleve"><i class="fa fa-table fa-fw"></i>Sujet</a></li>
+                
+            </ul>
+        </div>
+        <div class="col-md-9 well">
+            <div class="mainContent">
+                <div id="zonedepot-ele">
+                    <div class="titre-depot">Zone de dépot</div>
+                    <div id="depot">
+                        <form method="post" action="" enctype="multipart/form-data">
+                            <input type="file" for="fichierdepot" name="<?php $_FILES['fichierdepot']['name']?>" />
+                        </form>
+                    </div>
+                </div>
+                <div id="zonedoc">
+                    <div class="titre-depot">Fichier(s) déposé(s)</div>
+                    <div class="row fic-depot">
+                        <div class="col-md-1 icone-depot glyphicon glyphicon-folder-close"></div>
+                        <div class="col-md-5 nom-fichier">A chercher dans la BDD</div>
+                        <div class="col-md-5">
+                        <div class="row">
+                            <div class="date_depot">Créé le : (code)</div>
+                        </div>
+                        <div class="row">
+                            <div class="date_limite">Date limite de dépôt : (code)</div>
+                        </div>
+                        <div class="row">
+                            <div class="nbr_depot">(code)</div>
+                        </div>
+                        </div>
+                        <button class="col-md-1 tele_fichier glyphicon glyphicon-download-alt" ></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
