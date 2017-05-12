@@ -82,13 +82,13 @@ body {
 
 /* Custom page footer */
 .footer {
-  padding-top: 20px;
+
   text-align: center;
   background-color: blueviolet;
   border: none;
   color: white;
-  padding-bottom: 20px;
-  position: absolute;
+  
+
   height: 69px;
   width: 100%;
   bottom: 0;
