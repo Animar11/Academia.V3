@@ -26,6 +26,11 @@ var app = angular
 
 
     $routeProvider
+      .when('/RepartitionEquipeEleve', {
+          templateUrl : 'views/RepartitionEquipeEleve.html',
+          controller : '',
+          controllerAs:''
+        })
       .when('/Session_equipe', {
         templateUrl : 'views/Session_equipe.html',
         controller : 'SEController',
@@ -136,4 +141,3 @@ var app = angular
  app.controller('academia', function($scope, random){
   $scope.generate
  });
-

@@ -13,10 +13,7 @@ body {
   display : table;
   width: 100%;
 }
-footer {
-  display : table-row;
-  height: 100px; /* à titre d'exemple */
-}
+
 
 html {
   height: 100%;
@@ -92,7 +89,7 @@ body {
   color: white;
   padding-bottom: 20px;
   position: absolute;
-  height: 100px;
+  height: 69px;
   width: 100%;
   bottom: 0;
 }
